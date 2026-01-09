@@ -23,14 +23,14 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+  <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90">
 
     <!-- Skip Link -->
     <a class="skip-link visually-hidden-focusable" href="#hero">Skip to main content</a>
 
     <!-- Navbar -->
     <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
+      <div class="container-fluid">
         <a class="navbar-brand" href="#hero">
           <span class="brand-name">Timothy<span class="accent">.</span></span>
         </a>
@@ -53,7 +53,7 @@
 
     <!-- Hero -->
     <header id="hero" class="hero d-flex align-items-center">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row align-items-center gy-5">
           <div class="col-lg-7" data-aos="fade-right" data-aos-duration="800">
             <p class="hero-eyebrow">Hello, I'm</p>
@@ -81,11 +81,14 @@
         <div class="shape shape-2"></div>
         <div class="shape shape-3"></div>
       </div>
+      <div class="scroll-indicator">
+        <i class="bi bi-chevron-down"></i>
+      </div>
     </header>
 
     <!-- About -->
     <section id="about" class="section">
-      <div class="container">
+      <div class="container-fluid">
         <h2 class="section-title" data-aos="fade-up">About<span class="accent">.</span></h2>
         <div class="row gy-4">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
@@ -116,192 +119,9 @@
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Experience<span class="accent">.</span></h2>
-        <div class="timeline" data-aos="fade-up" data-aos-delay="100">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content card">
-              <div class="card-body">
-                <span class="timeline-date">Jan 2021 – Present</span>
-                <h3 class="timeline-title">Security Developer</h3>
-                <h4 class="timeline-company">CYBER1 Solutions · Part-time</h4>
-                <p class="timeline-location"><i class="bi bi-geo-alt me-1"></i>South Africa</p>
-                <ul class="timeline-bullets">
-                  <li>Develop and maintain security-focused software solutions.</li>
-                  <li>Conduct vulnerability assessments and code reviews.</li>
-                  <li>Collaborate with cross-functional teams to implement security best practices.</li>
-                  <li>Stay current with evolving cybersecurity threats and countermeasures.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Education<span class="accent">.</span></h2>
-        <div class="timeline" data-aos="fade-up" data-aos-delay="100">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content card">
-              <div class="card-body">
-                <span class="timeline-date">2025</span>
-                <h3 class="timeline-title">BSc (Hons) Computer Science</h3>
-                <h4 class="timeline-company">University of Pretoria</h4>
-                <p class="text-muted mb-0">Honours degree with advanced coursework in AI, machine learning, research methodology, and advanced algorithms.</p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content card">
-              <div class="card-body">
-                <span class="timeline-date">2022 – 2024</span>
-                <h3 class="timeline-title">BSc Computer Science</h3>
-                <h4 class="timeline-company">University of Pretoria</h4>
-                <p><span class="badge bg-success">Distinction</span></p>
-                <p class="text-muted mb-0">Comprehensive degree covering data structures, algorithms, databases, networks, software engineering, and more.</p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content card">
-              <div class="card-body">
-                <span class="timeline-date">2016 – 2020</span>
-                <h3 class="timeline-title">IEB Matric Certificate</h3>
-                <h4 class="timeline-company">Michaelhouse</h4>
-                <p class="text-muted mb-2">Snell Society · Inventors Society · Book Readers Society · Top 5 Academic Rewards · Smile Programme · Waterpolo · Canoeing · Rugby</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Skills<span class="accent">.</span></h2>
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="skill-card card h-100">
-              <div class="card-body">
-                <h3 class="skill-card-title"><i class="bi bi-code-square me-2"></i>Languages</h3>
-                <div class="skill-tags">
-                  <span class="skill-tag">Java</span>
-                  <span class="skill-tag">C++</span>
-                  <span class="skill-tag">C#</span>
-                  <span class="skill-tag">Python</span>
-                  <span class="skill-tag">JavaScript</span>
-                  <span class="skill-tag">PHP</span>
-                  <span class="skill-tag">SQL</span>
-                  <span class="skill-tag">Dart</span>
-                  <span class="skill-tag">Assembly</span>
-                  <span class="skill-tag">C</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="skill-card card h-100">
-              <div class="card-body">
-                <h3 class="skill-card-title"><i class="bi bi-layers me-2"></i>Web &amp; Markup</h3>
-                <div class="skill-tags">
-                  <span class="skill-tag">HTML5</span>
-                  <span class="skill-tag">CSS3</span>
-                  <span class="skill-tag">Bootstrap</span>
-                  <span class="skill-tag">LaTeX</span>
-                  <span class="skill-tag">Jupyter</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="skill-card card h-100">
-              <div class="card-body">
-                <h3 class="skill-card-title"><i class="bi bi-tools me-2"></i>Tools &amp; Platforms</h3>
-                <div class="skill-tags">
-                  <span class="skill-tag">Git</span>
-                  <span class="skill-tag">GitHub</span>
-                  <span class="skill-tag">Linux</span>
-                  <span class="skill-tag">VS Code</span>
-                  <span class="skill-tag">IntelliJ IDEA</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="skill-card card h-100">
-              <div class="card-body">
-                <h3 class="skill-card-title"><i class="bi bi-lightbulb me-2"></i>Concepts</h3>
-                <div class="skill-tags">
-                  <span class="skill-tag">Data Structures</span>
-                  <span class="skill-tag">Algorithms</span>
-                  <span class="skill-tag">OOP</span>
-                  <span class="skill-tag">Databases</span>
-                  <span class="skill-tag">Networks</span>
-                  <span class="skill-tag">Cybersecurity</span>
-                  <span class="skill-tag">Machine Learning</span>
-                  <span class="skill-tag">AI</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" class="section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Certifications &amp; Achievements<span class="accent">.</span></h2>
-        <div class="row gy-4">
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="cert-card card h-100">
-              <div class="card-body text-center">
-                <div class="cert-icon"><i class="bi bi-key-fill"></i></div>
-                <h4 class="cert-title">Golden Key International Honour Society</h4>
-                <p class="cert-issuer text-muted">Lifetime Member</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="cert-card card h-100">
-              <div class="card-body text-center">
-                <div class="cert-icon"><i class="bi bi-shield-check"></i></div>
-                <h4 class="cert-title">Cybersecurity Certifications</h4>
-                <p class="cert-issuer text-muted">Various industry certifications</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="cert-card card h-100">
-              <div class="card-body text-center">
-                <div class="cert-icon"><i class="bi bi-github"></i></div>
-                <h4 class="cert-title">GitHub Achievements</h4>
-                <p class="cert-issuer text-muted">Pull Shark ×2 · Quickdraw</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="text-center mt-4" data-aos="fade-up" data-aos-delay="400">
-          <a href="https://www.linkedin.com/in/timothy-whitaker-34ab281bb/details/certifications/" target="_blank" rel="noreferrer" class="btn btn-outline-primary">
-            <i class="bi bi-box-arrow-up-right me-2"></i>View All Certifications on LinkedIn
-          </a>
-        </p>
-      </div>
-    </section>
-
     <!-- Projects -->
-    <section id="projects" class="section section-alt">
-      <div class="container">
+    <section id="projects" class="section">
+      <div class="container-fluid">
         <h2 class="section-title" data-aos="fade-up">Projects<span class="accent">.</span></h2>
         <p class="section-subtitle text-muted" data-aos="fade-up" data-aos-delay="50">A selection of coursework and personal projects from my GitHub.</p>
 
@@ -547,20 +367,201 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Get In Touch<span class="accent">.</span></h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-            <div class="contact-card card">
-              <div class="card-body text-center py-5">
-                <p class="contact-intro">I'm open to software engineering and security development opportunities. Feel free to reach out!</p>
-                <div class="contact-links d-flex flex-wrap justify-content-center gap-3">
-                  <a href="mailto:timothymdevilliers@gmail.com" class="btn btn-outline-primary btn-lg"><i class="bi bi-envelope me-2"></i>Email</a>
-                  <a href="https://github.com/Timothy-333" target="_blank" rel="noreferrer" class="btn btn-outline-primary btn-lg"><i class="bi bi-github me-2"></i>GitHub</a>
-                  <a href="https://www.linkedin.com/in/timothy-whitaker-34ab281bb/" target="_blank" rel="noreferrer" class="btn btn-outline-primary btn-lg"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+    <!-- Experience -->
+    <section id="experience" class="section section-alt">
+      <div class="container-fluid">
+        <h2 class="section-title" data-aos="fade-up">Experience<span class="accent">.</span></h2>
+        <div class="timeline" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content card">
+              <div class="card-body">
+                <span class="timeline-date">Jan 2021 – Present</span>
+                <h3 class="timeline-title">Security Developer</h3>
+                <h4 class="timeline-company">CYBER1 Solutions · Part-time</h4>
+                <p class="timeline-location"><i class="bi bi-geo-alt me-1"></i>South Africa</p>
+                <ul class="timeline-bullets">
+                  <li>Develop and maintain security-focused software solutions.</li>
+                  <li>Conduct vulnerability assessments and code reviews.</li>
+                  <li>Collaborate with cross-functional teams to implement security best practices.</li>
+                  <li>Stay current with evolving cybersecurity threats and countermeasures.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section section-alt">
+      <div class="container-fluid">
+        <h2 class="section-title" data-aos="fade-up">Education<span class="accent">.</span></h2>
+        <div class="timeline" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content card">
+              <div class="card-body">
+                <span class="timeline-date">2025</span>
+                <h3 class="timeline-title">BSc (Hons) Computer Science</h3>
+                <h4 class="timeline-company">University of Pretoria</h4>
+                <p class="text-muted mb-0">Honours degree with advanced coursework in AI, machine learning, research methodology, and advanced algorithms.</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content card">
+              <div class="card-body">
+                <span class="timeline-date">2022 – 2024</span>
+                <h3 class="timeline-title">BSc Computer Science</h3>
+                <h4 class="timeline-company">University of Pretoria</h4>
+                <p><span class="badge bg-success">Distinction</span></p>
+                <p class="text-muted mb-0">Comprehensive degree covering data structures, algorithms, databases, networks, software engineering, and more.</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content card">
+              <div class="card-body">
+                <span class="timeline-date">2016 – 2020</span>
+                <h3 class="timeline-title">IEB Matric Certificate</h3>
+                <h4 class="timeline-company">Michaelhouse</h4>
+                <p class="text-muted mb-2">Snell Society · Inventors Society · Book Readers Society · Top 5 Academic Rewards · Smile Programme · Waterpolo · Canoeing · Rugby</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container-fluid">
+        <h2 class="section-title" data-aos="fade-up">Skills<span class="accent">.</span></h2>
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-card card h-100">
+              <div class="card-body">
+                <h3 class="skill-card-title"><i class="bi bi-code-square me-2"></i>Languages</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">C++</span>
+                  <span class="skill-tag">C#</span>
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">PHP</span>
+                  <span class="skill-tag">SQL</span>
+                  <span class="skill-tag">Dart</span>
+                  <span class="skill-tag">Assembly</span>
+                  <span class="skill-tag">C</span>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-card card h-100">
+              <div class="card-body">
+                <h3 class="skill-card-title"><i class="bi bi-layers me-2"></i>Web &amp; Markup</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">HTML5</span>
+                  <span class="skill-tag">CSS3</span>
+                  <span class="skill-tag">Bootstrap</span>
+                  <span class="skill-tag">LaTeX</span>
+                  <span class="skill-tag">Jupyter</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-card card h-100">
+              <div class="card-body">
+                <h3 class="skill-card-title"><i class="bi bi-tools me-2"></i>Tools &amp; Platforms</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">GitHub</span>
+                  <span class="skill-tag">Linux</span>
+                  <span class="skill-tag">VS Code</span>
+                  <span class="skill-tag">IntelliJ IDEA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-card card h-100">
+              <div class="card-body">
+                <h3 class="skill-card-title"><i class="bi bi-lightbulb me-2"></i>Concepts</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Data Structures</span>
+                  <span class="skill-tag">Algorithms</span>
+                  <span class="skill-tag">OOP</span>
+                  <span class="skill-tag">Databases</span>
+                  <span class="skill-tag">Networks</span>
+                  <span class="skill-tag">Cybersecurity</span>
+                  <span class="skill-tag">Machine Learning</span>
+                  <span class="skill-tag">AI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="section">
+      <div class="container-fluid">
+        <h2 class="section-title" data-aos="fade-up">Certifications &amp; Achievements<span class="accent">.</span></h2>
+        <div class="row gy-4">
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="cert-card card h-100">
+              <div class="card-body text-center">
+                <div class="cert-icon"><i class="bi bi-key-fill"></i></div>
+                <h4 class="cert-title">Golden Key International Honour Society</h4>
+                <p class="cert-issuer text-muted">Lifetime Member</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="cert-card card h-100">
+              <div class="card-body text-center">
+                <div class="cert-icon"><i class="bi bi-shield-check"></i></div>
+                <h4 class="cert-title">Cybersecurity Certifications</h4>
+                <p class="cert-issuer text-muted">Various industry certifications</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="cert-card card h-100">
+              <div class="card-body text-center">
+                <div class="cert-icon"><i class="bi bi-github"></i></div>
+                <h4 class="cert-title">GitHub Achievements</h4>
+                <p class="cert-issuer text-muted">Pull Shark ×2 · Quickdraw</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-center mt-4" data-aos="fade-up" data-aos-delay="400">
+          <a href="https://www.linkedin.com/in/timothy-whitaker-34ab281bb/details/certifications/" target="_blank" rel="noreferrer" class="btn btn-outline-primary">
+            <i class="bi bi-box-arrow-up-right me-2"></i>View All Certifications on LinkedIn
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container-fluid">
+        <h2 class="section-title" data-aos="fade-up">Get In Touch<span class="accent">.</span></h2>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-card card">
+            <div class="card-body text-center py-5">
+              <p class="contact-intro">Although I currently am employed, I am open to more part time opportunities. Feel free to reach out!</p>
+              <div class="contact-links d-flex flex-wrap justify-content-center gap-3">
+                <a href="mailto:timothymdevilliers@gmail.com" class="btn btn-outline-primary btn-lg"><i class="bi bi-envelope me-2"></i>Email</a>
+                <a href="https://github.com/Timothy-333" target="_blank" rel="noreferrer" class="btn btn-outline-primary btn-lg"><i class="bi bi-github me-2"></i>GitHub</a>
+                <a href="https://www.linkedin.com/in/timothy-whitaker-34ab281bb/" target="_blank" rel="noreferrer" class="btn btn-outline-primary btn-lg"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
               </div>
             </div>
           </div>
@@ -570,7 +571,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container text-center">
+      <div class="container-fluid text-center">
         <p class="mb-2">&copy; 2026 Timothy Whitaker. All rights reserved.</p>
       </div>
     </footer>

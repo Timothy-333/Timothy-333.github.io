@@ -18,7 +18,7 @@ const handleNavbarScroll = () => {
   }
 };
 
-window.addEventListener('scroll', handleNavbarScroll);
+globalThis.addEventListener('scroll', handleNavbarScroll);
 handleNavbarScroll();
 
 // ===== Back to Top Button =====
@@ -32,7 +32,7 @@ const handleBackToTop = () => {
   }
 };
 
-window.addEventListener('scroll', handleBackToTop);
+globalThis.addEventListener('scroll', handleBackToTop);
 handleBackToTop();
 
 // ===== Smooth Scroll for Anchor Links =====
@@ -79,7 +79,7 @@ const highlightNav = () => {
   });
 };
 
-window.addEventListener('scroll', highlightNav);
+globalThis.addEventListener('scroll', highlightNav);
 highlightNav();
 
 // ===== Typing Effect for Hero Title (optional enhancement) =====
@@ -91,7 +91,7 @@ if (heroTitle) {
 // ===== Parallax Effect on Shapes =====
 const shapes = document.querySelectorAll('.shape');
 
-window.addEventListener('mousemove', (e) => {
+globalThis.addEventListener('mousemove', (e) => {
   const x = (e.clientX / window.innerWidth - 0.5) * 30;
   const y = (e.clientY / window.innerHeight - 0.5) * 30;
   
@@ -102,24 +102,58 @@ window.addEventListener('mousemove', (e) => {
 });
 
 // ===== Card Tilt Effect =====
+// Note: CSS transform transitions are disabled for these cards in styles.css
 const cards = document.querySelectorAll('.project-card:not(.project-featured), .skill-card, .cert-card, .about-card');
 
-cards.forEach(card => {
-  card.addEventListener('mousemove', (e) => {
+const MAX_TILT_DEG = 3.5;
+const LIFT_PX = 2;
+const EASE = 0.85;
+
+cards.forEach((card) => {
+  let rafId = null;
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+
+  const render = () => {
+    rafId = null;
+
+    currentX += (targetX - currentX) * EASE;
+    currentY += (targetY - currentY) * EASE;
+
+    const rotateY = -currentX * MAX_TILT_DEG;
+    const rotateX = currentY * MAX_TILT_DEG;
+
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-${LIFT_PX}px)`;
+
+    const stillMoving = Math.abs(targetX - currentX) > 0.001 || Math.abs(targetY - currentY) > 0.001;
+    if (stillMoving) rafId = requestAnimationFrame(render);
+  };
+
+  const schedule = () => {
+    if (rafId == null) rafId = requestAnimationFrame(render);
+  };
+
+  card.addEventListener('pointermove', (e) => {
+    if (e.pointerType && e.pointerType !== 'mouse') return;
+
     const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = (y - centerY) / 20;
-    const rotateY = (centerX - x) / 20;
-    
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-  });
-  
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-  });
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+
+    // Convert to -1..1 range
+    targetX = (x - 0.5) * 2;
+    targetY = (y - 0.5) * 2;
+
+    schedule();
+  }, { passive: true });
+
+  card.addEventListener('pointerleave', () => {
+    targetX = 0;
+    targetY = 0;
+    schedule();
+  }, { passive: true });
 });
 
 // ===== Skill Tag Hover Animation =====

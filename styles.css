@@ -211,6 +211,17 @@ a:hover {
   opacity: 0.4;
 }
 
+@media (min-width: 992px) {
+  .hero-avatar {
+    width: 400px;
+    height: 400px;
+  }
+
+  .hero-avatar-ring {
+    inset: -16px;
+  }
+}
+
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
@@ -257,7 +268,7 @@ a:hover {
 
 /* ===== Sections ===== */
 .section {
-  padding: 100px 0;
+  padding: 60px 0;
 }
 
 .section-alt {
@@ -287,6 +298,21 @@ a:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: rgba(88, 166, 255, 0.3);
+}
+
+/* Tilted cards update transform in JS; don't animate transform via CSS */
+.project-card.card,
+.skill-card.card,
+.cert-card.card,
+.about-card.card {
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.project-card.card:hover,
+.skill-card.card:hover,
+.cert-card.card:hover,
+.about-card.card:hover {
+  transform: none;
 }
 
 .card-body {
@@ -472,10 +498,33 @@ a:hover {
   font-size: 0.9rem;
 }
 
+/* ===== Scroll Indicator ===== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  color: var(--accent);
+  opacity: 0.7;
+  animation: bounce 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
 /* ===== Projects ===== */
 .project-card {
   position: relative;
   overflow: hidden;
+  will-change: transform;
 }
 
 .project-card::before {
